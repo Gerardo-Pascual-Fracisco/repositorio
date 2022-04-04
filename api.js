@@ -1,4 +1,4 @@
-const API = 'http://192.168.1.126:8000/api/category'
+const API = 'http://localhost:8000/api/category'
 export const getTasks=async() => { 
     const res = await fetch(API)
     return await res.json()
