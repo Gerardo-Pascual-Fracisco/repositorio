@@ -21,3 +21,9 @@ export const deleteTask = async (id_category) => {
       method: "DELETE",
     });
   };
+
+  const Services = 'http://192.168.1.126:8000/api/service'
+export const getServices=async() => { 
+    const res = await fetch(Services)
+    return await res.json()
+}
