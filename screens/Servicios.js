@@ -1,21 +1,13 @@
 import React from "react";
-import { View, StyleSheet, Text } from "react-native";
+import ServicesList from '../components/ServicesList'
+import Layout from '../components/Layout'
 
-const Servicios = () => {
-  return (
-    <View style={styles.center}>
-      <Text>Servicios</Text>
-    </View>
-  );
-};
 
-const styles = StyleSheet.create({
-  center: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    textAlign: "center",
-  },
-});
+const Servicios = () => ( 
+                  
 
+  <Layout>
+<ServicesList/>
+</Layout>
+);
 export default Servicios;

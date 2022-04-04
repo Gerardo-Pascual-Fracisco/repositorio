@@ -10,6 +10,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@react-native/normalize-color": "^2.0.0",  
     "@react-navigation/bottom-tabs": "^6.x",
     "@react-navigation/drawer": "^6.x",
     "@react-navigation/native": "^6.x",
@@ -34,7 +35,7 @@
     "react-native-web": "0.17.1",
     "styled-components": "^5.3.5",
     "typescript": "~4.3.5",
-    "uuid": "^8.3.2"
+    "uuid": "^7.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
