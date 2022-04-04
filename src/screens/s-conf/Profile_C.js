@@ -3,7 +3,7 @@ import { ActivityIndicator, StyleSheet, StatusBar, FlatList, Text, View, SafeAre
 import styled from 'styled-components'
 import axios from 'axios'
 
-const URL = 'http://localhost:8000/api/user/Leonora Schuppe'
+const URL = 'http://localhost:8000/api/user/Damien Ebert'
 
 function Profile_C() {
 
@@ -61,7 +61,7 @@ function Profile_C() {
 
               <ViewA2>
                 <text>Direccion</text>
-                <td><InputA2></InputA2></td>
+                <td><InputA2 value={item.address}></InputA2></td>
               </ViewA2>
               <ViewA2>
                 <text>Redes Sociales</text>

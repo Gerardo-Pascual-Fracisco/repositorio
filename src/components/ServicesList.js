@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from "react";
 import { FlatList,RefreshControl} from "react-native";
-import ItemService from '../src/components/ItemService'
-import { getServices } from '../api'
+import ItemService from './ItemService'
+import { getServices } from '../../api'
 
 
 const ServicesList= () => {

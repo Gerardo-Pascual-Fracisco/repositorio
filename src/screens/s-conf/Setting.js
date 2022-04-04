@@ -11,18 +11,22 @@ const Setting = () => {
     <View>
       <div>
         <ButtonGroup>
-          <Button onClick={() => navigation.navigate('Profile_C')}>
+          <button onClick={() => navigation.navigate('Profile_C')}
+          style={styles.Button}>
             <textA>Editar Cuenta</textA>
-          </Button>
-          <Button onClick={() => navigation.navigate('Mode')}>
+          </button>
+          <button onClick={() => navigation.navigate('Mode')}
+          style={styles.Button}>
             <textA>Modo Oscuro</textA>
-          </Button>
-          <Button onClick={() => navigation.navigate('Attention')}>
+          </button>
+          <button onClick={() => navigation.navigate('Attention')}
+          style={styles.Button}>
             <textA>Atencion a Cliente</textA>
-          </Button>
-          <Button onClick={() => navigation.navigate('Report')}>
+          </button>
+          <button onClick={() => navigation.navigate('Report')}
+          style={styles.Button}>
             <textA>Informe de la Cuenta</textA>
-          </Button>
+          </button>
         </ButtonGroup>
       </div>
       <ButtonGroupEnd>
@@ -32,19 +36,6 @@ const Setting = () => {
   )
 }
 
-const Button = styled.button`
-  background: ${(props) => (props.primary ? 'palevioletred' : 'white')};
-  color: ${(props) => (props.primary ? 'white' : 'palevioletred')};
-
-  background-color: black;
-  color: white;
-  font-size: 20px;
-  padding: 10px 60px;
-  border-radius: 5px;
-  margin: 10px 0px;
-  cursor: pointer;
-  text-align: left;
-`
 
 const ButtonGroup = styled.div`
   display: flex;
@@ -60,5 +51,17 @@ font-size: 20,
 text-align: center,
 color: white,
 `
+const styles = StyleSheet.create({
+  Button: {
+    backgroundColor: "black",
+    color: "white",
+    fontSize: "20px",
+    padding: "10px 60px",
+    bordeRadius: "5px",
+    margin: "10px 0px",
+    cursor: "pointer",
+    textAlign: "left",
+  },
+});
 
 export default Setting

@@ -1,11 +1,15 @@
 import React from "react";
 import { View, StyleSheet, Text } from "react-native";
+import Layout from '../../components/Layout';
+import ServicesList from '../../components/ServicesList';
+
 
 const Search = () => {
   return (
-    <View style={styles.center}>
-      <Text>Mis Servicios</Text>
-    </View>
+   
+  <Layout>
+  <ServicesList/>
+  </Layout>
   );
 };
 
