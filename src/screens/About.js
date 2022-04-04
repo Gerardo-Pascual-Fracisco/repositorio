@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { TextInput, TouchableOpacity, Text, StyleSheet } from "react-native";
-import { saveTask, getTask, updateTask } from "../api";
-import Layout from "../components/Layout";
+import { saveTask, getTask, updateTask } from "../../api";
+import Layout from "../../components/Layout";
 
 const About = ({ navigation, route }) => {
   const [task, setTask] = useState({

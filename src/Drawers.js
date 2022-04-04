@@ -19,7 +19,7 @@ const Drawers = () => {
         },
         headerTintColor: "white",
         headerBackTitle: "Back",
-        //headerShown: false,
+        headerShown: false,
         tabBarActiveTintColor: 'purple',
     }}>
 

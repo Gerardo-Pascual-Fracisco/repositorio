@@ -1,11 +1,11 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { Text, TouchableOpacity } from 'react-native'
-import Home from "../screens/Home";
-import About from "../screens/About";
-import Servicios from "../screens/Servicios";
-import MyServices from "../screens/MyServices";
-import PerfilSettings from "../screens/PerfilSettings";
+import Home from "../src/screens/Home";
+import About from "../src/screens/About";
+import Servicios from "../src/screens/Servicios";
+import MyServices from "../src/screens/MyServices";
+import PerfilSettings from "../src/screens/PerfilSettings";
 
 const Stack = createStackNavigator();
 
