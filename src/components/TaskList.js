@@ -11,7 +11,7 @@ const Tasklist = () => {
   const [tasks, setTasks] = useState([])
   const loadTasks = async () => {
     const data = await getTasks()
-    setTasks(data);
+    setTasks(data.data);
   };
   useEffect(() => {
     loadTasks();

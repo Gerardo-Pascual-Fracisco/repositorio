@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { ActivityIndicator, StyleSheet, StatusBar, FlatList, Text, View, SafeAreaView, ScrollView, Image, } from "react-native";
-import styled from 'styled-components'
-import axios from 'axios'
+import styled from 'styled-components';
+import axios from 'axios';
 
-const URL = 'http://localhost:8000/api/user/Damien Ebert'
+const URL = 'http://localhost:8000/api/user/1'
 
 function Profile_C() {
 
@@ -29,8 +29,6 @@ function Profile_C() {
     <SafeAreaView style={styles.container}>
       <ScrollView showsHorizontalScrollIndicato={false} showsVerticalScrollIndicator={false}>
 
-
-
         <FlatList
           data={data}
           renderItem={({ item }) => (
@@ -47,34 +45,34 @@ function Profile_C() {
                     </View>
                   </td>
                   <td>
-                    <ViewA1 style={{ paddingRight: 100, }}>
+                    <View style={styles.ViewA1}>
                       <text>Nombre:</text>
-                      <td><InputA1 value={item.name}></InputA1></td>
-                    </ViewA1>
-                    <ViewA1>
+                      <td><Input style={styles.InputA1} value={item.name}></Input></td>
+                    </View>
+                    <View style={styles.ViewA1}>
                       <text>Correo:</text>
-                      <td><InputA1 value={item.email}></InputA1></td>
-                    </ViewA1>
+                      <td><Input style={styles.InputA1} value={item.email}></Input></td>
+                    </View>
                   </td>
                 </tr>
               </table>
 
-              <ViewA2>
+              <View style={styles.ViewA2}>
                 <text>Direccion</text>
-                <td><InputA2 value={item.address}></InputA2></td>
-              </ViewA2>
-              <ViewA2>
+                <td><Input style={styles.InputA2} value={item.address}></Input></td>
+              </View>
+              <View style={styles.ViewA2}>
                 <text>Redes Sociales</text>
-                <td><InputA2></InputA2></td>
-              </ViewA2>
-              <ViewA2>
+                <td><Input style={styles.InputA2}></Input></td>
+              </View>
+              <View style={styles.ViewA2}>
                 <text>Metodo de Pago</text>
-                <td><InputA2></InputA2></td>
-              </ViewA2>
+                <td><Input style={styles.InputA2}></Input></td>
+              </View>
 
-              <ViewA2>
-                <ButtonA1>Cambiar Contraseña</ButtonA1>
-              </ViewA2>
+              <View style={styles.ViewA2}>
+                <Button style={styles.ButtonA1}>Cambiar Contraseña</Button>
+              </View>
             </View>
 
 
@@ -89,61 +87,6 @@ function Profile_C() {
 
 }
 
-const ViewA2 = styled.div`
-  background-color: write;
-  color: black;
-  border-color: orange;
-  font-size: 20px;
-  border-radius: 5px;
-  margin: 10px 0px;
-  text-align: left;
-`;
-const InputA2 = styled.input`
-
-  background-color: whrite;
-  color: black;
-  border-color: purple;
-  font-size: 20px;
-  padding: 25% 30%;
-  border-radius: 5px;
-  margin: 10px 0px;
-  text-align: left;
-`;
-
-const ViewA1 = styled.div`
-
-  background-color: write;
-  color: black;
-  border-color: orange;
-  font-size: 15px;
-  border-radius: 5px;
-  text-align: left;
-`;
-
-const InputA1 = styled.input`
-
-  background-color: whrite;
-  color: black;
-  border-color: orange;
-  padding: 5% 25%;
-  border-radius: 5px;
-  margin: 10px 0px;
-  text-align: left;
-`;
-
-const ButtonA1 = styled.button`
-
-  background-color: "#138d75";
-  color: write;
-  border-color: black;
-  font-size: 20px;
-  padding: 5px 5px;
-  border-radius: 15px;
-  margin: 10px 0px;
-  cursor: pointer;
-  text-align: left;
-  
-`;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -158,18 +101,58 @@ const styles = StyleSheet.create({
   Image: {
     paddingLeft: 0,
   },
-  body: {
-    marginTop: 10,
-    flexDirection: "row",
+  ViewA1: {
+    borderColor: "orange",
+    color: "black",
+    backgroundColor: "white",
+    borderColor: "orange",
+    fontSize: 15,
+    borderRadius: 5,
+    textAlign: "left",
   },
-  textList: {
-    fontSize: 25,
-    color: "blue",
+  InputA1: {
+    borderColor: "orange",
+    padding: "5% 25%",
+
+    backgroundColor: "white",
+    color: "black",
+    borderRadius: 5,
+    margin: "10px 0px",
+    textAlign: "left",
+  },
+  ViewA2: {
+    borderColor: "orange",
+    color: "black",
+    backgroundColor: "white",
+    margin: "10px 0px",
+    fontSize: 15,
+    borderRadius: 5,
+    textAlign: "left",
+  
+  },
+  InputA2: {
+    borderColor: "purple",
+    fontSize: 20,
+    padding: "25% 30%",
+
+    backgroundColor: "white",
+    color: "black",
+    borderRadius: 5,
+    margin: "10px 0px",
+    textAlign: "left",
+  },
+  ButtonA1: {
+    backgroundColor: "#138d75",
+
+    color: "#fdfefe",
+    borderColor: "black",
+    fontSize: 20,
+    padding: "5px 5px",
+    borderRadius: 15,
+    margin: "10px 0px",
+    //cursor: "pointer",
+    textAlign: "left",
   },
 
-  title: {
-    fontSize: 25,
-    color: "blue",
-  },
 });
 export default Profile_C;

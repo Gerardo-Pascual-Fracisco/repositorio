@@ -1,67 +1,72 @@
-import React from 'react'
-import { View, StyleSheet, Text } from 'react-native'
-import styled from 'styled-components'
-import { useNavigation } from '@react-navigation/native'
+import React from 'react';
+import { View, StyleSheet, Text,Button } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
-function sayHello() {}
+function sayHello() {};
 
 const Setting = () => {
-  const navigation = useNavigation()
+  const navigation = useNavigation();
   return (
-    <View>
-      <div>
-        <ButtonGroup>
-          <button onClick={() => navigation.navigate('Profile_C')}
-          style={styles.Button}>
-            <textA>Editar Cuenta</textA>
-          </button>
-          <button onClick={() => navigation.navigate('Mode')}
-          style={styles.Button}>
-            <textA>Modo Oscuro</textA>
-          </button>
-          <button onClick={() => navigation.navigate('Attention')}
-          style={styles.Button}>
-            <textA>Atencion a Cliente</textA>
-          </button>
-          <button onClick={() => navigation.navigate('Report')}
-          style={styles.Button}>
-            <textA>Informe de la Cuenta</textA>
-          </button>
-        </ButtonGroup>
-      </div>
-      <ButtonGroupEnd>
-        <Button onClick={sayHello}>cerrar sesion</Button>
-      </ButtonGroupEnd>
+    <View style={styles.container}>
+      <View style={styles.ButtonGroup}>
+        <View style={styles.ButtonGroup}>
+          <Button onClick={() => navigation.navigate('Profile_C')}
+          style={styles.Button} title='Editar Cuenta'>
+          </Button>
+          <Button onClick={() => navigation.navigate('Mode')}
+          style={styles.Button} title='Modo Oscuro'>
+          </Button>
+          <Button onClick={() => navigation.navigate('Attention')}
+          style={styles.Button} color='#000' title='Atencion a Cliente'>
+          </Button>
+          <Button onClick={() => navigation.navigate('Report')}
+          style={styles.textA} title='Informe de la Cuenta'>
+          </Button>
+        </View>
+      </View>
+      <View style={styles.ButtonGroupEnd}>
+      <Button title='Cerrar Sesion'></Button>
+      </View>
     </View>
-  )
+  );
 }
 
 
-const ButtonGroup = styled.div`
-  display: flex;
-  flex-direction: column;
-`
-const ButtonGroupEnd = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-`
-const textA = styled.text`
-font-size: 20,
-text-align: center,
-color: white,
-`
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop: 15,
+    paddingLeft: 20,
+    paddingRight: 15,
+  },
+  ButtonGroup: {
+    borderColor: "orange",
+    color: "black",
+    backgroundColor: "white",
+    borderColor: "orange",
+    fontSize: 15,
+    borderRadius: 5,
+    textAlign: "left",
+  },
+  ButtonGroupEnd: {
+    display:'flex',
+    flexDirection: "column",
+    alignItems: "flex-start",
+  },
+  textA: {
+    fontSize: 20,
+    textAlign: "center",
+    color: "white",
+  },
   Button: {
     backgroundColor: "black",
     color: "white",
-    fontSize: "20px",
+    fontSize: 20,
     padding: "10px 60px",
-    bordeRadius: "5px",
+    borderRadius: 5,
     margin: "10px 0px",
-    cursor: "pointer",
     textAlign: "left",
   },
 });
 
-export default Setting
+export default Setting;

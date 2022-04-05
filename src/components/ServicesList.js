@@ -11,7 +11,7 @@ const ServicesList= () => {
   const [Services, setServices] = useState([])
   const loadServices = async () => {
     const data = await getServices()
-    setServices(data);
+    setServices(data.data);
   };
   useEffect(() => {
     loadServices();
